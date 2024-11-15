@@ -22,6 +22,13 @@
       "@/*": ["./src/*"]
     }
   },
+  "heme": {
+    "extend": {
+      "animation": {
+        "spin": "spin 20s linear infinite",
+      },
+    },
+  },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

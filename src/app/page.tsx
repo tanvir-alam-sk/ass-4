@@ -1,9 +1,10 @@
 import Container from "@/components/Container";
+import Extra from "@/components/Extra";
 import Header from "@/components/Home/Header";
+import HotelBooked from "@/components/Home/HotelBooked";
 import OverviewPage from "@/components/Home/OverviewPage";
 import PropertyGallery from "@/components/Home/PropertyGallery";
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -12,7 +13,8 @@ export default function Home() {
       <Container>
         <Navbar></Navbar>
         <PropertyGallery></PropertyGallery>
-        <OverviewPage labels={['Overview', 'Amenities', 'Policies']}></OverviewPage>
+        <OverviewPage></OverviewPage>
+        <HotelBooked></HotelBooked>
       </Container>
     </div>
   );

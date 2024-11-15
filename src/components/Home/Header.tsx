@@ -4,11 +4,11 @@ import { AiOutlineGlobal } from "react-icons/ai";
 export default function Header() {
     const openCountryModal=()=>{}
   return (
-    <nav className="border-b border-gray-200 bg-white">
+    <nav className="border-b border-gray-200 bg-white ">
       <div className="max-w-screen mx-auto px-4">
-        <div className="flex items-center justify-end h-16">
+        <div className="hidden md:flex items-center justify-end h-16">
           {/* Center section with main navigation */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className=" md:flex items-center space-x-6">
             {/* Language/Region Selector */}
             <button className="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
             <AiOutlineGlobal />
