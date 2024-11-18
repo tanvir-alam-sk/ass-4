@@ -6,7 +6,7 @@ export default function HotelBooked() {
   return (
     <div className="container mx-auto p-4">
       {/* Main Container */}
-      <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-3">
         {/* Property Details */}
         <div className="md:col-span-2">
           <div className="mb-4">
@@ -84,24 +84,24 @@ export default function HotelBooked() {
         </div>
 
         {/* Booking Summary */}
-        <div className="px-5">
-          <div className="bg-slate-900 text-white rounded-xl py-8 mb-6 flex items-center gap-3 shadow-lg px-8">
+        <div className="md:px-5 md:col-span-1">
+          <div className="bg-slate-900 text-white rounded-xl p-3 ps-5 py-5 md:p-8 mb-6 flex items-center gap-3 shadow-lg">
             <div className="flex items-center">
               <div className="flex items-center justify-center">
-                <div className="grid grid-cols-3 gap-2 border-t-transparent animate-spi delay-5000">
-                        <div className="w-3 h-3 bg-white rounded"></div>
-                        <div className="w-3 h-3 bg-white rounded rotate-45"></div>
-                        <div className="w-3 h-3 bg-white rounded"></div>
-                        <div className="w-3 h-3 bg-white rounded rotate-45"></div>
-                        <div className="w-0 h-0 bg-slate-900 rounded"></div>
-                        <div className="w-3 h-3 bg-white rounded rotate-45"></div>
-                        <div className="w-3 h-3 bg-white rounded rotate-45"></div>
-                        <div className="w-3 h-3 bg-white rounded rotate-45"></div>
-                        <div className="w-3 h-3 bg-white rounded"></div>
+                <div className="grid grid-cols-3 gap-2 border-t-transparent animate-spi duration-5000 relative w-[56px] h-[56px]" >
+                        <div className="w-3 h-3 bg-white rounded-sm absolute top-[2px] left-[2px]"></div>
+                        <div className="w-3 h-3 bg-white rounded-sm rotate-45 absolute -top-[3px] left-[22px] "></div>
+                        <div className="w-3 h-3 bg-white rounded-sm absolute top-[2px] right-[2px] "></div>
+                        <div className="w-3 h-3 bg-white rounded-sm rotate-45 absolute top-[22px] -left-[3px] "></div>
+                        <div className="w-3 h-3 bg-slate-900 rounded -m-3 absolute" ></div>
+                        <div className="w-3 h-3 bg-white rounded-sm rotate-45 absolute top-[22px] -right-[3px]"></div>
+                        <div className="w-3 h-3 bg-white rounded-sm  absolute bottom-[2px] left-[2px]" ></div>
+                        <div className="w-3 h-3 bg-white rounded-sm rotate-45 absolute -bottom-[3px] left-[22px]"></div>
+                        <div className="w-3 h-3 bg-white rounded-sm absolute bottom-[2px] right-[2px]"></div>
                     </div>
               </div>
             </div>
-            <div className="flex-1 px-8">
+            <div className="flex-1 px-2 md:px-8">
               <p className="text-lg font-semibold leading-normal">
                 Members get our best prices when signed in!
               </p>
