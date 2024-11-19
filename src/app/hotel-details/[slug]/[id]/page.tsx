@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import Container from "@/components/Container";
-import Extra from "@/components/Extra";
 import Amenities from "@/components/Home/Amenities";
 import Cancellation from "@/components/Home/Cancellation";
 import DamageIncidentals from "@/components/Home/DamageIncidentals";
@@ -18,13 +18,17 @@ import Reviews from "@/components/Home/Reviews";
 import RoomAndBedDetails from "@/components/Home/RoomAndBedDetails";
 import Navbar from "@/components/Navbar";
 import { dataLoad } from "@/components/utilitis/fetchData";
+import React from "react";
 
-export default async function Home() {
-  const hotels = await dataLoad("seaside-haven/h001");
+ 
+
+export default async function page({ params }: any) {
+  const { slug, id } = params;
+  const hotels = await dataLoad(`${slug}/${id}`);
   const {hotel}=hotels
   const { title,description,guest_count,bedroom_count,bathroom_count,amenities,host_information,address,latitude,longitude,rooms}=hotel
   return (
-    <div className="">
+    <div>
       <Header></Header>
       <Container>
         <Navbar></Navbar>

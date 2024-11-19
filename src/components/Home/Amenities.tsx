@@ -4,18 +4,26 @@ import { BiSolidDryer, BiSolidWasher } from "react-icons/bi";
 import { FaCarAlt, FaHome } from "react-icons/fa";
 import { LuUtensilsCrossed } from "react-icons/lu";
 
-import managerPropertyLogo from "@/assets/manager-property.png";
+// import managerPropertyLogo from "assets/manager-property.png";
 
-interface LanguageProps {
-  languages: string[];
-}
+// interface LanguageProps {
+//   languages: string[];
+// }
 
 interface AmenityProps {
   icon: React.ReactNode;
   name: string;
 }
 
-export default function Amenities() {
+
+type HotelInfo={
+  host:{
+    name:string;
+    contact:string;
+    email:string;
+  },
+}
+export default function Amenities({host}:HotelInfo) {
   const languages: string[] = ["English", "French", "German", "Spanish"];
   const amenities: AmenityProps[] = [
     { icon: <LuUtensilsCrossed className="w-6 h-6" />, name: "Kitchen" },
@@ -33,10 +41,10 @@ export default function Amenities() {
 
         <div className="flex items-center space-x-4">
           <div className="w-28 h-28 relative">
-            <Image src={managerPropertyLogo} alt="" />
+            <Image src="/assets/manager-property.png" width={112} height={112} alt="" />
           </div>
         </div>
-        <p className="text-md font-extralight">Evolve</p>
+        <p className="text-md font-extralight">{host.name}</p>
 
         {/* Languages Section */}
         <div className="space-y-2">

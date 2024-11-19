@@ -29,7 +29,12 @@ interface PolicyItem {
     policies: PolicyItem[];
   }
 
-export default function PropertyDetails() {
+
+  type HotelInfo={
+    title:string
+    description:string
+  }
+export default function PropertyDetails({title,description}:HotelInfo) {
     const details: PropertyDetails = {
         title: "Juneau Vacation Home: Stunning View + Beach Access",
         description: "Escape to the mountains and experience the great outdoors at this lovely Juneau vacation rental! Perched on the shore of Lynn Canal, this 2-bedroom, 1-bath home is the perfect getaway for those looking to enjoy a relaxing retreat surrounded by nature. Spend your day fishing for King Salmon, exploring Lena Beach and the rocky coastline, or hiking the nearby trails. After your outdoor adventure, kick back on the private deck and admire the breathtaking panoramic views!",
@@ -76,13 +81,16 @@ export default function PropertyDetails() {
           { text: "NOTE: The property sleeps 3 guests in 2 beds, with room for 4 total by using the full floor" }
         ]
       };
+
+
+
   return (
     <div className="md:w-2/3 p-6 space-y-8">
       {/* Title Section */}
       <section>
         <h1 className="text-2xl font-bold mb-4">About this property</h1>
-        <p className="text-gray-700 mb-4">{details.title}</p>
-        <p className="text-gray-600 mb-4">{details.description}</p>
+        <p className="text-gray-900 mb-4 text-lg">{title}</p>
+        <p className="text-gray-800 mb-4 text-base">{description}</p>
         <p className="text-gray-500 text-sm">{details.propertyCode}</p>
       </section>
 
@@ -131,9 +139,9 @@ export default function PropertyDetails() {
       <section>
         <h2 className="font-semibold mb-2">-- REST EASY WITH US --</h2>
         <p className="text-gray-600">
-          Evolve makes it easy to find and book properties you'll never want to leave. You can relax knowing 
-          that our properties will always be ready for you and that we'll answer the phone 24/7. Even better, 
-          if anything is off about your stay, we'll make it right. You can count on our homes and our people to 
+          Evolve makes it easy to find and book properties you&lsquo;ll never want to leave. You can relax knowing 
+          that our properties will always be ready for you and that we&apos;ll answer the phone 24/7. Even better, 
+          if anything is off about your stay, we&apos;ll make it right. You can count on our homes and our people to 
           make you feel welcome—because we know what vacation means to you.
         </p>
       </section>

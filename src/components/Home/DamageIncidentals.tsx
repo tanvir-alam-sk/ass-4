@@ -9,6 +9,7 @@ export default function
             <p className="col-span-2">You will be responsible for any damage to the rental property caused by you or
                 your party during your stay.</p>
         </div>
+        
     </div>
   )
 }
