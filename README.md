@@ -73,6 +73,9 @@ To start the development server, run:
 ```bash
 npm run dev
 
+```test
+npx jest --coverage
+
 
 Visit http://localhost:3000 to see the application.
 
