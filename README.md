@@ -42,6 +42,7 @@ This project is a full-stack web application for displaying hotel details using 
 This project is a full-stack web application for displaying hotel details using a React frontend with Next.js, integrated with a backend API developed with Node.js and Express.js. The project is built with TypeScript to ensure type safety and maintainability, and it includes unit tests to validate core functionality.
 
 ## Getting Started
+git clone  https://github.com/tanvir-alam-sk/assign-4 hotel-management-client
 
 ### Installation
 
